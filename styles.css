@@ -662,6 +662,10 @@ video {
   aspect-ratio: 1 / 1;
 }
 
+.h-0 {
+  height: 0px;
+}
+
 .h-\[24px\] {
   height: 24px;
 }
@@ -1063,6 +1067,10 @@ video {
   transition-duration: 150ms;
 }
 
+.duration-150 {
+  transition-duration: 150ms;
+}
+
 .duration-200 {
   transition-duration: 200ms;
 }
@@ -1075,12 +1083,15 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
-.checked\:bg-gradient-to-br:checked {
-  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+input[type=checkbox]:checked {
+  background-image: url('check.svg'), 
+                            linear-gradient(to right bottom, #18cfff, #1999f7);
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
-.checked\:bg-\[url\(check\.svg\)\]:checked {
-  background-image: url(check.svg);
+.checked\:bg-gradient-to-br:checked {
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
 
 .checked\:from-\[\#18cfff\]:checked {
@@ -1091,26 +1102,6 @@ video {
 
 .checked\:to-\[\#1999f7\]:checked {
   --tw-gradient-to: #1999f7 var(--tw-gradient-to-position);
-}
-
-.checked\:bg-center:checked {
-  background-position: center;
-}
-
-.checked\:bg-no-repeat:checked {
-  background-repeat: no-repeat;
-}
-
-.hover\:bg-\[url\(check\.svg\)\]:hover {
-  background-image: url(check.svg);
-}
-
-.hover\:bg-center:hover {
-  background-position: center;
-}
-
-.hover\:bg-no-repeat:hover {
-  background-repeat: no-repeat;
 }
 
 @media (min-width: 768px) {
